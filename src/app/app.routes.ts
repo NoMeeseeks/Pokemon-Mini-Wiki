@@ -2,11 +2,11 @@ import { Routes } from '@angular/router';
 
 export const routes: Routes = [
   {
-    path: 'pokemon',
+    path: 'pokeweb',
     loadChildren: () => import('./pokemon/pokemon.routes').then(m => m.routes)
   },
   {
     path: '**',
-    redirectTo: 'pokemon'
+    redirectTo: 'pokeweb'
   },
 ];

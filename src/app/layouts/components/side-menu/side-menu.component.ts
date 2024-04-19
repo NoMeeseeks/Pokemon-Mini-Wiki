@@ -1,5 +1,6 @@
 import { CommonModule, NgFor } from '@angular/common';
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 export interface menuItem {
   nombre: string;
@@ -9,7 +10,7 @@ export interface menuItem {
 @Component({
   selector: 'side-menu',
   standalone: true,
-  imports: [CommonModule, NgFor],
+  imports: [CommonModule, RouterModule, NgFor],
   templateUrl: './side-menu.component.html',
   styleUrl: './side-menu.component.css'
 })
@@ -17,10 +18,10 @@ export class SideMenuComponent {
   public menu: menuItem[] = [
     {
       nombre: 'tipos',
-      ruta: ''
+      ruta: 'tipos'
     },
     {
       nombre: 'habilidades',
-      ruta: ''
+      ruta: 'habilidades'
     }];
 }

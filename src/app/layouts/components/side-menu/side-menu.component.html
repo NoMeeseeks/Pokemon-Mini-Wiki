@@ -1,4 +1,6 @@
 <ol>
-    <li class="align-middle bg-amber-200 rounded-md p-2 mb-2 text-center" *ngFor="let itemMenu of menu">{{
-        itemMenu.nombre}}</li>
+    <li class="align-middle bg-red-600 rounded-md p-2 mb-2 text-center text-white font-bold"
+        *ngFor="let itemMenu of menu" [routerLink]="[itemMenu.ruta]" routerLinkActive="active">
+        {{itemMenu.nombre}}
+    </li>
 </ol>

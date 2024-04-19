@@ -10,7 +10,8 @@ export const routes: Routes = [
     children:
       [
         { path: 'habilidades', component: HabilidadesComponent },
-        { path: 'tipos', component: TiposComponent }
+        { path: 'tipos', component: TiposComponent },
+        { path: '**', redirectTo: 'habilidades' }
       ]
   },
 ];
